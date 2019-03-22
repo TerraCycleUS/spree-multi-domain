@@ -17,12 +17,13 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  version = '>= 3.1.0', '< 4.0'
+  version = '>= 3.1.0', '< 5.0'
   s.add_dependency 'spree_core', version
   s.add_dependency 'spree_backend', version
   s.add_dependency 'spree_api', version
   s.add_dependency 'spree_extension'
   s.add_dependency 'spree_analytics_trackers'
+  s.add_dependency 'paperclip'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coffee-rails'
@@ -32,6 +33,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'pg', '~> 0.18'
   s.add_development_dependency 'rspec-rails'
   s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'sqlite3', '~> 1.3.6'
   s.add_development_dependency 'appraisal'
 end
