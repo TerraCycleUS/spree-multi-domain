@@ -22,7 +22,8 @@ describe Spree::Admin::ProductsController do
         spree_put :update,
           id: @product.to_param,
           product: {
-            name: @product.name
+            name: @product.name,
+            store_ids: ''
           }
 
         expect(@product.reload.store_ids).to be_empty
