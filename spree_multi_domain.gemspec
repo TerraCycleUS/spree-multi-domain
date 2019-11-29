@@ -23,17 +23,17 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_api', version
   s.add_dependency 'spree_extension'
   s.add_dependency 'spree_analytics_trackers'
-  s.add_dependency 'paperclip'
   s.add_dependency 'deface', '~> 1.0'
 
   s.add_development_dependency 'capybara'
   s.add_development_dependency 'coffee-rails'
   s.add_development_dependency 'factory_bot', '~> 4.7'
   s.add_development_dependency 'ffaker'
-  s.add_development_dependency 'mysql2', '~> 0.5.1'
-  s.add_development_dependency 'pg', '~> 0.18'
-  s.add_development_dependency 'rspec-rails'
+  s.add_development_dependency 'mysql2'
+  s.add_development_dependency 'pg'
+  s.add_development_dependency 'rspec-rails', '~> 4.0.0.beta2'
   s.add_development_dependency 'sass-rails'
-  s.add_development_dependency 'sqlite3', '~> 1.3.6'
+  s.add_development_dependency 'sqlite3'
   s.add_development_dependency 'appraisal'
+  s.add_development_dependency 'webdrivers'
 end
