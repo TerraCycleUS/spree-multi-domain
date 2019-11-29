@@ -11,7 +11,7 @@ module SpreeMultiDomain
     end
 
     def current_tracker
-      @current_tracker ||= Spree::Tracker.current(request.env['SERVER_NAME'])
+      @current_tracker ||= Spree::Tracker.find_current(request.env['SERVER_NAME'])
     end
 
     def get_taxonomies
