@@ -1,18 +1,14 @@
 require 'spec_helper'
 
 describe Spree::Order do
-
-  before(:each) do
-    @store = FactoryBot.create(:store)
-    @order = FactoryBot.create(:order, store: @store)
-
-    @order2 = FactoryBot.create(:order)
-  end
+  let!(:store)  { create(:store) }
+  let!(:order)  { create(:order, store: store) }
+  let!(:order2) { create(:order) }
 
   it 'should correctly find order by store' do
-    order_by_store = Spree::Order.by_store(@store)
+    order_by_store = Spree::Order.by_store(store)
 
-    order_by_store.should include(@order)
-    order_by_store.should_not include(@order2)
+    expect(order_by_store).to include(order)
+    expect(order_by_store).not_to include(order2)
   end
 end
