@@ -19,7 +19,11 @@ describe Spree::Admin::StoresController do
     it 'can update logo' do
       put :update, params: { id: store.to_param, store: { logo: image_file }}
 
-      expect(store.reload.logo.blob.filename).to eq(image_file.original_filename)
+      if Spree.version.to_f < 3.7
+        expect(store.reload.logo_file_name).to eq image_file.original_filename
+      else
+        expect(store.reload.logo.blob.filename).to eq(image_file.original_filename)
+      end
     end
   end
 end
