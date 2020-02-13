@@ -19,7 +19,6 @@ module Spree
         def store_ids_string=(s)
           self.store_ids = s.to_s.split(',').map(&:strip)
         end
-
       end
     end
   end
